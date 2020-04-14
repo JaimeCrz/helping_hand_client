@@ -41,4 +41,9 @@ describe("when products are visible", () => {
     });
     cy.get('#total-price').should('contain', '228.0'); //product
   });
+
+  it("Successfully confirms Task/order", () => {
+    cy.get("button").contains("Confirm").click();
+    cy.get("#message-confirm").should("contain", "Your request has been posted");
+    });
 });

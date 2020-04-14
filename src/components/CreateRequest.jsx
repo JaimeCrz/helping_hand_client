@@ -29,7 +29,6 @@ const CreateRequest = props => {
         product_id: id
       })
     }
-    // debugger
     dispatch({ type: 'UPDATE_REQUEST', payload: response.data.task })
   }
 
