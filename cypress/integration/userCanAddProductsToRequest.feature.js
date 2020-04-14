@@ -39,8 +39,6 @@ describe("when products are visible", () => {
       cy.contains("Potatoes"); //product
       cy.contains("Shampoo"); //product
     });
-    cy.get("#request-list").within(() => {
-      cy.get('total-price').should('contain', '228'); //product
-    });
+    cy.get('#total-price').should('contain', '228.0'); //product
   });
 });

@@ -1,7 +1,7 @@
 const initialState = {
   products: [],
   showRequestForm: false,
-  task: { products: [] },
+  task: { products: [], order_total: null },
   taskID: null
 };
 

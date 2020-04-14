@@ -7,6 +7,7 @@ import { fetchProducts } from '../state/actions/productActions'
 const CreateRequest = props => {
   let productDisplay
   let requestDisplay
+  let requestTotalPrice
 
   const dispatch = useDispatch()
 
@@ -52,6 +53,7 @@ const CreateRequest = props => {
   }
 
   if (props.task) {
+    requestTotalPrice = (props.task.order_total)
     requestDisplay = props.task.products.map(product => {
       return (
         <>
@@ -63,8 +65,6 @@ const CreateRequest = props => {
     requestDisplay = (<></>)
   }
 
-
-
   return (
     <>
       <button className='create-request' onClick={getProducts.bind(this)}>
@@ -72,6 +72,7 @@ const CreateRequest = props => {
       </button>
       <ul id='product-list'>{productDisplay}</ul>
       <div id="request-list">{requestDisplay}</div>
+      <div id='total-price'>{requestTotalPrice}</div>
     </>
   )
 }
