@@ -23,7 +23,6 @@ const ProfilePage = props => {
     props.authenticated
   ) {
     viewProfileClaimedTasks = props.claimed_tasks.map(claimedTask => {
-      debugger
       claimedTaskProducts = claimedTask.products.map(product => {
         return (
           <div className='claimedTaskProduct'>

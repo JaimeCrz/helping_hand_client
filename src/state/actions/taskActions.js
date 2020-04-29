@@ -74,7 +74,6 @@ const declineTask = async (event, dispatch) => {
 };
 
 const deliverTask = async (event, dispatch) => {
-  debugger
   let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"));
   let id = event.target.id.slice(8);
   try {
@@ -105,7 +104,6 @@ const acceptTask = async (event, dispatch) => {
       { activity: "finalized" },
       { headers: headers }
     );
-    debugger
       dispatch({
         type: "GREETING",
         payload: response.data.message,
@@ -120,7 +118,7 @@ const acceptTask = async (event, dispatch) => {
 
 const destroyTask = async (event, dispatch) => {
   let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"));
-  let id = event.target.id.slice(8);
+  let id = event.target.id.slice(7);
   try {
     let response = await axios.delete(
       `/tasks/${id}`,
@@ -133,7 +131,6 @@ const destroyTask = async (event, dispatch) => {
       });
     }
   } catch (error) {
-    debugger
     dispatch({
       type: "GREETING",
       payload: error.response.data.error_message,
