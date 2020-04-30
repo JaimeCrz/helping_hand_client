@@ -6,7 +6,7 @@ const getConfirmedTasks = async (dispatch) => {
   dispatch({ type: "SAVE_REQUESTS", payload: response.data });
 };
 
-  const claimTask = async (event, dispatch) => {
+  const claimTask = async (event, dispatch) => {  //Used that one for displaying task in a list instead of in the map.
     let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"));
     let id = event.target.parentElement.dataset.id;
     try {
@@ -68,7 +68,7 @@ const declineTask = async (event, dispatch) => {
   } catch (error) {
     dispatch({
       type: "GREETING",
-      payload: error.message,
+      payload: error.response.data.error_message,
     });
   }
 };
@@ -90,7 +90,7 @@ const deliverTask = async (event, dispatch) => {
   } catch (error) {
     dispatch({
       type: "GREETING",
-      payload: error.message,
+      payload: error.response.data.error_message,
     });
   }
 };
@@ -111,7 +111,7 @@ const acceptTask = async (event, dispatch) => {
   } catch (error) {
     dispatch({
       type: "GREETING",
-      payload: error.message,
+      payload: error.response.data.error_message,
     });
   }
 };
