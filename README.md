@@ -1,4 +1,8 @@
-# [Helping Hand] (User interface / Web application)
+# [Helping Hand](https://helpinghandproject.netlify.app/)
+
+[![Build Status](https://semaphoreci.com/api/v1/robin-lillqvist/helping_hand_client/branches/development/badge.svg)](https://semaphoreci.com/robin-lillqvist/helping_hand_client)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c63fc4f3-bb39-4741-a94b-370cf872d50a/deploy-status)](https://app.netlify.com/sites/helpinghandproject/deploys)
+
 
 # Welcome to our Application! 
 
